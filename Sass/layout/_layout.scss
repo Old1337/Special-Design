@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Bai+Jamjuree:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600&family=Big+Shoulders+Display:wght@700&family=Josefin+Sans:wght@300;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca:wght@400;700&family=Libre+Franklin:ital,wght@0,300;0,700;1,600&family=Manrope:wght@500;700&family=Open+Sans:wght@300;400;700&family=Outfit:wght@400;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@100;300;500&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #{$primary-color};
+  --text-color: #{$text-color};
+  --option-bg: #{$option-bg};
+
+  --font-primary: #{$font-primary};
+
+  --line-height: #{$line-height};
+
+  --primary-transition: #{$primary-transition};
+
+  --btn-radius: #{$btn-radius};
+  --section-color: #{$section-color};
+}
+
+body {
+  font-family: var(--font-primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: var(--btn-radius);
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: -500px;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 2rem;
+  padding: 5px 10px;
+  border-radius: var(--btn-radius);
+  z-index: 5;
+  color: var(--text-color);
+  cursor: pointer;
+  box-shadow: 0px 0px 20px var(--primary-color);
+  transition: var(--primary-transition);
+
+  &.active {
+    right: 2rem;
+  }
+
+  & i {
+    animation: up-down infinite 2.5s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes up-down {
+  0%,
+  10%,
+  20%,
+  30%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  40%,
+  70% {
+    transform: translateY(-20px);
+  }
+}

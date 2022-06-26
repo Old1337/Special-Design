@@ -1,0 +1,66 @@
+.contact-us {
+  position: relative;
+  padding: 2rem;
+  background-image: url(../../images/contact.AVIF);
+  background-size: cover;
+  height: 50vh;
+
+  &_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &_container {
+    position: relative;
+  }
+
+  &_form {
+    display: grid;
+    grid-template-columns: 400px 450px;
+    grid-template-rows: 169px 200px;
+    place-content: center;
+    gap: 0.5rem;
+  }
+
+  &_left {
+    display: grid;
+    gap: 0.9rem;
+    & input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: rgba(218, 218, 218, 0.19);
+    }
+  }
+
+  &_right {
+    display: grid;
+    gap: 0.8rem;
+    & textarea {
+      height: 169px;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      resize: vertical;
+      background-color: rgba(218, 218, 218, 0.19);
+    }
+
+    & input {
+      padding: 0.7rem;
+      cursor: pointer;
+      color: white;
+      background-color: var(--primary-color);
+      border: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: var(--primary-transition);
+    }
+  }
+
+  &_form input:not([type="submit"]):focus,
+  &_form textarea:focus {
+    outline: 1px solid var(--primary-color);
+  }
+}

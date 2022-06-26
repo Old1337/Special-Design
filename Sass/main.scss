@@ -1,0 +1,30 @@
+/* ======= Import vendor files ======= */
+
+@import "vendor/normalize";
+
+/* ======= Import base files ======= */
+
+@import "base/variables";
+@import "base/placeholders";
+@import "base/mixin";
+
+/* ======= Import components files ======= */
+@import "components/title";
+@import "components/buttons";
+@import "components/popup";
+
+/* ======= Import layout files ======= */
+@import "layout/layout";
+@import "layout/menu";
+@import "layout/sidebar-nav";
+@import "layout/landing";
+@import "layout/header";
+@import "layout/about";
+@import "layout/skills";
+@import "layout/gallery";
+@import "layout/timeline";
+@import "layout/features";
+@import "layout/Testimonials";
+@import "layout/contactus";
+@import "layout/footer";
+@import "layout/breakpoints";

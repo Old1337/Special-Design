@@ -1,0 +1,18 @@
+$primary-color: #ff9800;
+$text-color: white;
+$option-bg: #00000033;
+$section-color: #1e1e1e;
+
+$font-primary: "Open Sans";
+
+$line-height: 1.6;
+
+$primary-transition: 0.5s;
+
+$btn-radius: 0.5rem;
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;

@@ -1,0 +1,128 @@
+.settings_box {
+  position: fixed;
+  width: 15rem;
+  height: 100vh;
+  top: 0;
+  left: -15rem;
+  background-color: #1e1e1e;
+  z-index: 5;
+  transition: var(--primary-transition);
+  &.active {
+    left: 0;
+  }
+}
+.settings--bg {
+  background-color: var(--option-bg);
+  border-radius: var(--btn-radius);
+  padding: 1rem;
+  text-align: center;
+}
+.icon_container {
+  position: absolute;
+  right: -3rem;
+  top: 10rem;
+  transform: translateY(-50%);
+  background-color: #1e1e1e;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+}
+.icon_gear {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  color: var(--text-color);
+  transition: var(--primary-transition);
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.settings {
+  padding: 0.9rem;
+}
+
+.settings_title {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-color);
+  text-align: center;
+}
+.settings_options {
+  justify-content: center;
+  gap: 0.6rem;
+}
+.settings_options li {
+  @include circle(25px, 25px);
+  background-color: #666;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  opacity: 0.5;
+  border: 3px solid var(--option-bg);
+}
+.settings_options li.active {
+  transition: var(--primary-transition);
+  border-color: var(--text-color);
+  opacity: 1;
+}
+.settings_options li:first-child {
+  background-color: #ff9800;
+}
+.settings_options li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings_options li:nth-child(3) {
+  background-color: #009688;
+}
+.settings_options li:nth-child(4) {
+  background-color: #03a9fa;
+}
+.settings_options li:nth-child(5) {
+  background-color: #4ca;
+}
+.settings_btn {
+  margin-top: 1rem;
+  @include circle(35px, 35px);
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  opacity: 0.5;
+  transition: var(--primary-transition);
+}
+.settings_btn.active {
+  opacity: 1;
+}
+.settings_buttons .settings_yes,
+.settings_buttons .settings_no {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary-color);
+  width: 4rem;
+  border: none;
+  border-radius: calc(0.8rem - var(--btn-radius));
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.settings_buttons .settings_yes.active,
+.settings_buttons .settings_no.active {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.reset_btn {
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  border-radius: var(--btn-radius);
+  background: #5a001e;
+  width: calc(100% - 0.9rem);
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}

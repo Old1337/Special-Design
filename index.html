@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A page with custom theme controller coded in HTML,CSS,SASS,JS"
+    />
+
+    <link rel="stylesheet" href="Sass/all.min.css" />
+    <link rel="stylesheet" href="Sass/main.css" />
+    <title>Special Design</title>
+  </head>
+  <body>
+    <!-- Start Settings Menu -->
+
+    <div class="settings_box">
+      <div class="icon_container">
+        <i class="fa-solid fa-gear icon_gear"></i>
+      </div>
+      <div class="settings">
+        <div class="settings_colors settings--bg">
+          <h2 class="settings_title">Primary Color</h2>
+          <ul class="settings_options flex">
+            <li class="active" data-color="#ff9800"></li>
+            <li data-color="#e91e63"></li>
+            <li data-color="#009688"></li>
+            <li data-color="#03a9fa"></li>
+            <li data-color="#4ca"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="settings">
+        <div class="settings_font settings--bg">
+          <h2 class="settings_title">Font Style</h2>
+          <div class="settings_options flex">
+            <button class="settings_btn active" data-font="Open Sans">
+              Aa
+            </button>
+            <button class="settings_btn" data-font="cursive">Aa</button>
+            <button class="settings_btn" data-font="fangsong">Aa</button>
+          </div>
+        </div>
+      </div>
+      <div class="settings">
+        <div class="settings_background settings--bg">
+          <h2 class="settings_title">Random Background</h2>
+          <div class="settings_buttons">
+            <button class="settings_yes active" data-background="true">
+              Yes
+            </button>
+            <button class="settings_no" data-background="false">No</button>
+          </div>
+        </div>
+      </div>
+      <div class="settings">
+        <div class="settings_navbar settings--bg">
+          <h2 class="settings_title">Sidebar Nav</h2>
+          <div class="settings_buttons">
+            <button class="settings_yes active" data-nav="true">Yes</button>
+            <button class="settings_no" data-nav="false">No</button>
+          </div>
+        </div>
+      </div>
+
+      <button aria-label="reset all options" class="reset_btn">
+        Reset Options
+      </button>
+    </div>
+    <!-- Start Sidebar nav -->
+
+    <nav aria-label="sidebar navigation" class="sidebar-nav active">
+      <ul class="sidebar-nav_links">
+        <li class="sidebar-nav_link" data-section="about">
+          <div class="sidebar-nav_tooltip">About</div>
+        </li>
+        <li class="sidebar-nav_link" data-section="skills">
+          <div class="sidebar-nav_tooltip">Skills</div>
+        </li>
+        <li class="sidebar-nav_link" data-section="gallery">
+          <div class="sidebar-nav_tooltip">Gallery</div>
+        </li>
+        <li class="sidebar-nav_link" data-section="timeline">
+          <div class="sidebar-nav_tooltip">Timeline</div>
+        </li>
+        <li class="sidebar-nav_link" data-section="features">
+          <div class="sidebar-nav_tooltip">Features</div>
+        </li>
+        <li class="sidebar-nav_link" data-section="Testimonials">
+          <div class="sidebar-nav_tooltip">Testimonials</div>
+        </li>
+      </ul>
+    </nav>
+    <!-- Start main -->
+    <main class="main">
+      <!-- Start Landing Section -->
+
+      <section aria-label="landing-section" class="landing">
+        <header class="header flex">
+          <div class="header_logo">Special Design</div>
+          <nav class="nav">
+            <ul class="nav_links flex">
+              <li class="nav_link">
+                <a class="active" href="#about">About</a>
+              </li>
+              <li class="nav_link"><a href="#skills">Skills</a></li>
+              <li class="nav_link"><a href="#gallery">Gallery</a></li>
+              <li class="nav_link"><a href="#timeline">Timeline</a></li>
+              <li class="nav_link"><a href="#features">Features</a></li>
+              <li class="nav_link"><a href="#Testimonials">Testimonials</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="landing_text">
+          <h1 class="landing_title">We are <span>Creative</span> agency</h1>
+          <p class="landing_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+            exercitationem laudantium debitis quisquam tempore? Odio!
+          </p>
+        </div>
+      </section>
+
+      <!-- Start About Section  -->
+      <section aria-label="about-section" class="about" id="about">
+        <div class="about_text">
+          <h2 class="about_title">About Us</h2>
+          <p class="about_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            ipsum, tenetur dolores esse magni ratione distinctio! Quod iusto
+            neque fuga, maxime quos nostrum quibusdam dicta deserunt blanditiis
+            non voluptate id?
+          </p>
+        </div>
+        <img class="about_image" src="images/about.AVIF" alt="" />
+      </section>
+
+      <!-- Start Skills Section -->
+      <section aria-label="skills-section" class="skills" id="skills">
+        <div class="skills_container container">
+          <h2 class="skills_title section--title">Our Skills</h2>
+          <div class="skills_box flex">
+            <h2 class="skills_skill">HTML</h2>
+            <div class="skills_prograssbar">
+              <div class="skills_prograss" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="skills_box flex">
+            <h2 class="skills_skill">CSS</h2>
+            <div class="skills_prograssbar">
+              <div class="skills_prograss" data-width="70%"></div>
+            </div>
+          </div>
+          <div class="skills_box flex">
+            <h2 class="skills_skill">Sass</h2>
+            <div class="skills_prograssbar">
+              <div class="skills_prograss" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="skills_box flex">
+            <h2 class="skills_skill">javascript</h2>
+            <div class="skills_prograssbar">
+              <div class="skills_prograss" data-width="68%"></div>
+            </div>
+          </div>
+          <div class="skills_box flex">
+            <h2 class="skills_skill">Php</h2>
+            <div class="skills_prograssbar">
+              <div class="skills_prograss" data-width="72%"></div>
+            </div>
+          </div>
+          <div class="skills_box flex">
+            <h2 class="skills_skill">Mysql</h2>
+            <div class="skills_prograssbar">
+              <div class="skills_prograss" data-width="89%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section aria-label="gallery section" class="gallery" id="gallery">
+        <div class="gallery_container container">
+          <h2 class="gallery_title section--title">Our Gallery</h2>
+          <div class="gallery_box grid">
+            <img
+              class="gallery_image"
+              src="images/gallery-01.AVIF"
+              alt="Pc image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-02.AVIF"
+              alt="MacBook image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-03.AVIF"
+              alt="Space Image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-04.AVIF"
+              alt="Two monitors image"
+            />
+            <img class="gallery_image" src="images/gallery-05.AVIF" alt="Global
+            business image />
+            <img
+              class="gallery_image"
+              src="images/gallery-06.AVIF"
+              alt="Atomic design image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-07.AVIF"
+              alt="Note taking image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-08.AVIF"
+              alt="Illustration image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-09.AVIF"
+              alt="Statistic image"
+            />
+            <img
+              class="gallery_image"
+              src="images/gallery-10.AVIF"
+              alt="Statistic two image"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Start Timeline Section -->
+      <section aria-label="timeline section" class="timeline" id="timeline">
+        <div class="timeline_container container">
+          <div class="timeline_content grid">
+            <div class="timeline_year">2022</div>
+
+            <div class="timeline_left">
+              <div class="timeline_text">
+                <h2 class="timeline_title">We are launching soon!</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  deleniti expedita doloremque ratione quo laudantium ullam eius
+                  facilis perspiciatis minima iure omnis vitae velit adipisci
+                  autem maxime molestias, assumenda repudiandae!
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline_right">
+              <div class="timeline_text">
+                <h2 class="timeline_title">2022 is about to end!</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  deleniti expedita doloremque ratione quo laudantium ullam eius
+                  facilis perspiciatis minima iure omnis vitae velit adipisci
+                  autem maxime molestias, assumenda repudiandae!
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline_year">2023</div>
+
+            <div class="timeline_left">
+              <div class="timeline_text">
+                <h2 class="timeline_title">Are you excited?</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  deleniti expedita doloremque ratione quo laudantium ullam eius
+                  facilis perspiciatis minima iure omnis vitae velit adipisci
+                  autem maxime molestias, assumenda repudiandae!
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline_right">
+              <div class="timeline_text">
+                <h2 class="timeline_title">
+                  All of your dreams will come true
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  deleniti expedita doloremque ratione quo laudantium ullam eius
+                  facilis perspiciatis minima iure omnis vitae velit adipisci
+                  autem maxime molestias, assumenda repudiandae!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Features Section -->
+      <section aria-label="features section" class="features" id="features">
+        <h2 class="features_title section--title">Our features</h2>
+        <div class="features_container container grid">
+          <div class="features_box">
+            <i
+              role="img"
+              aria-label="We develop anything you want!"
+              class="fa-solid fa-code features_icon"
+            ></i>
+            <h2 class="features_feature">Development</h2>
+          </div>
+          <div class="features_box">
+            <i
+              role="img"
+              aria-label="All of your ads are free for 2 months!"
+              class="fa-solid fa-rectangle-ad features_icon"
+            ></i>
+            <h2 class="features_feature">Marketing</h2>
+          </div>
+          <div class="features_box">
+            <i
+              role="img"
+              aria-label="Hosting is free for one year!"
+              class="fa-solid fa-server features_icon"
+            ></i>
+            <h2 class="features_feature">Hosting</h2>
+          </div>
+          <div class="features_box">
+            <i
+              role="img"
+              aria-label="We Also do mobile development!"
+              class="fa-solid fa-mobile features_icon"
+            ></i>
+            <h2 class="features_feature">Mobile Dev</h2>
+          </div>
+          <div class="features_box">
+            <i
+              role="img"
+              aria-label="We do cloud hosting for 5$ a month!"
+              class="fa-solid fa-cloud features_icon"
+            ></i>
+            <h2 class="features_feature">Cloud and hosting</h2>
+          </div>
+          <div class="features_box">
+            <i
+              role="img"
+              aria-label="WE CARE ABOUT YOUR SEO!"
+              class="fa-solid fa-laptop features_icon"
+            ></i>
+            <h2 class="features_feature">SEO</h2>
+          </div>
+        </div>
+      </section>
+      <!-- Start Testimonials Section -->
+
+      <section
+        aria-label="Testimonials section"
+        class="Testimonials"
+        id="Testimonials"
+      >
+        <h2 class="Testimonials_title">Testimonials</h2>
+        <div class="Testimonials_content grid container">
+          <div class="Testimonials_box">
+            <p class="Testimonials_p">
+              Iam very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div class="Testimonials_info">
+              <p class="Testimonials_name">Omar Fahmy</p>
+              <div class="Testimonials_position">CEO at the company</div>
+            </div>
+          </div>
+          <div class="Testimonials_box">
+            <p class="Testimonials_p">
+              Iam very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div class="Testimonials_info">
+              <p class="Testimonials_name">Omar Fahmy</p>
+              <div class="Testimonials_position">CEO at the company</div>
+            </div>
+          </div>
+          <div class="Testimonials_box">
+            <p class="Testimonials_p">
+              Iam very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div class="Testimonials_info">
+              <p class="Testimonials_name">Omar Fahmy</p>
+              <div class="Testimonials_position">CEO at the company</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact us section -->
+      <section aria-label="contact us section" class="contact-us">
+        <div class="contact-us_overlay"></div>
+        <div class="contact-us_container container">
+          <h2 class="contact-us_title section--title">Contact Us</h2>
+
+          <form action="" class="contact-us_form">
+            <div class="contact-us_left">
+              <input
+                aria-label="type your name"
+                type="text"
+                placeholder="your name"
+                name="username"
+                required
+                aria-required="true"
+              />
+              <input
+                aria-label="type your phone number"
+                type="text"
+                placeholder="your phone"
+                name="phone"
+                required
+                aria-required="true"
+              />
+              <input
+                aria-label="type your email address"
+                type="email"
+                placeholder="your email"
+                name="email"
+                required
+                aria-required="true"
+              />
+              <input
+                aria-label="type your subject"
+                type="text"
+                placeholder="subject"
+                name="subject"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <div class="contact-us_right">
+              <textarea
+                name="message"
+                placeholder="your message"
+                required
+                aria-required="true"
+              ></textarea>
+              <input aria-label="submit your info" type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Start Scroll To Top Button -->
+
+    <button class="scroll-top-btn">
+      <i
+        role="img"
+        aria-label="scroll to top button"
+        class="fa-solid fa-arrow-up"
+      ></i>
+    </button>
+    <script src="javascript/main.js" type="module"></script>
+    <script src="javascript/menu.js" type="module"></script>
+  </body>
+</html>

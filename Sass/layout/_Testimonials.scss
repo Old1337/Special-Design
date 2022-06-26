@@ -1,0 +1,46 @@
+.Testimonials {
+  padding: 50px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: var(--primary-transition);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--section-color);
+    z-index: -1;
+  }
+
+  &_title {
+    color: var(--text-color);
+    text-align: center;
+  }
+  &_content {
+    @include distrubte-grid-evenly(250px);
+  }
+  &_box {
+    background-color: white;
+    padding: 1.5rem;
+  }
+  &_p {
+    font-style: italic;
+  }
+  &_name {
+    color: black;
+    font-weight: bold;
+  }
+}

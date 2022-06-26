@@ -1,0 +1,49 @@
+@include respond-to("small") {
+  /* Start Landing Section*/
+
+  .nav {
+    display: none;
+  }
+  .landing_title {
+    font-size: 1.5rem;
+  }
+
+  /* End Landing Section*/
+
+  /* Start About Section */
+
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* End About Section */
+
+  /* Start Skills Section */
+
+  .skills_box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* End Skills Section */
+
+  /* Start timeline Section */
+
+  .timeline_left,
+  .timeline_right {
+    width: 100%;
+  }
+
+  /* End timeline Section */
+
+  /* Start Contact Us Section */
+  .contact-us_form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-content: stretch;
+
+    gap: 1rem;
+  }
+  /* End Contact Us Section */
+}

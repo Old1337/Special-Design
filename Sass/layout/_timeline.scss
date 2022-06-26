@@ -1,0 +1,85 @@
+.timeline {
+  padding: 20px;
+  background-color: #10131a;
+
+  &_year {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 5rem;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: var(--btn-radius);
+    color: var(--text-color);
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  &_content {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: var(--primary-color);
+      left: 50%;
+      top: 0;
+    }
+  }
+  &_left,
+  &_right {
+    position: relative;
+    width: calc(50% - 25px);
+    background-color: #202631;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--btn-radius);
+
+    &::before {
+      content: "";
+      position: absolute;
+      @include circle(14px, 14px);
+      top: 20px;
+      background-color: var(--text-color);
+      border: 1px solid var(--primary-color);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 1rem solid;
+      top: 12px;
+    }
+  }
+
+  &_left {
+    &::before {
+      right: -33px;
+    }
+    &::after {
+      right: -25px;
+      border-color: transparent transparent transparent #202631;
+    }
+  }
+
+  &_right {
+    place-self: end;
+    &::before {
+      left: -30px;
+    }
+    &::after {
+      left: -25px;
+      border-color: transparent #202631 transparent transparent;
+    }
+  }
+
+  &_title {
+    color: white;
+  }
+  p {
+    color: #f0f8ff;
+    font-weight: bold;
+  }
+}

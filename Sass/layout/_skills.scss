@@ -1,0 +1,32 @@
+.skills {
+  background-color: var(--section-color);
+  padding: 20px;
+  &_box {
+    background-color: var(--section-color);
+    padding: 0.5rem;
+    color: white;
+    // gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: var(--btn-radius);
+    align-items: center;
+  }
+  &_skill {
+    font-size: 1.2rem;
+    width: 8rem;
+  }
+  &_prograssbar {
+    position: relative;
+    height: 2rem;
+    width: 100%;
+    background-color: #eee;
+    border-radius: var(--btn-radius);
+  }
+  &_prograss {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: var(--btn-radius);
+    transition: var(--primary-transition);
+  }
+}

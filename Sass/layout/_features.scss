@@ -1,0 +1,40 @@
+.features {
+  padding: 2rem;
+  background-color: #000000d9;
+  &_container {
+    @include distrubte-grid-evenly(300px);
+    text-align: center;
+    margin-top: 4rem;
+    gap: 1rem;
+  }
+  &_box {
+    background: var(--option-bg);
+    border-radius: var(--btn-radius);
+    padding: 1rem;
+  }
+  &_icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+  }
+  &_feature {
+    position: relative;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--primary-color);
+      width: 4rem;
+      height: 4px;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &_p {
+    color: #acb0c3;
+
+    font-weight: bold;
+  }
+}

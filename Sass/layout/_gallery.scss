@@ -1,0 +1,20 @@
+.gallery {
+  padding: 100px;
+  background-color: var(--section-color);
+  &_box {
+    @include distrubte-grid-evenly(200px);
+    place-items: center;
+    column-gap: 7rem;
+    margin-top: 3rem;
+  }
+  &_image {
+    border: 2px solid var(--primary-color);
+    transition: var(--primary-transition);
+    cursor: pointer;
+    width: 304px;
+    height: 173px;
+    &:hover {
+      transform: translateY(-1rem) scale(1.1);
+    }
+  }
+}
