@@ -697,7 +697,7 @@ a {
 
 .landing {
   position: relative;
-  background-image: url(../../images/01.AVIF);
+  background-image: url(../images/01.AVIF);
   z-index: 2;
 }
 
@@ -1128,7 +1128,7 @@ a {
 .contact-us {
   position: relative;
   padding: 2rem;
-  background-image: url(../../images/contact.AVIF);
+  background-image: url(../images/contact.AVIF);
   background-size: cover;
   height: 50vh;
 }
