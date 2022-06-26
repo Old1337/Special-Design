@@ -82,6 +82,7 @@
 .settings_btn {
   margin-top: 1rem;
   @include circle(35px, 35px);
+  text-align: center;
   cursor: pointer;
   border: none;
   background-color: var(--primary-color);

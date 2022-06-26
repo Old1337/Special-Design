@@ -593,6 +593,7 @@ a {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  text-align: center;
   cursor: pointer;
   border: none;
   background-color: var(--primary-color);
@@ -917,6 +918,7 @@ a {
   -webkit-column-gap: 7rem;
           column-gap: 7rem;
   margin-top: 3rem;
+  place-content: center;
 }
 
 .gallery_image {
@@ -1225,6 +1227,17 @@ a {
     text-align: center;
   }
   /* End Skills Section */
+  /* Start popup */
+  .popup-box {
+    padding: 0.5rem;
+  }
+  .popup-box img {
+    width: 20rem;
+  }
+  .popup-box .close-btn i {
+    font-size: 1.5rem;
+  }
+  /* End popup */
   /* Start timeline Section */
   .timeline_left, .timeline_right {
     width: 100%;
