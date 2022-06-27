@@ -103,7 +103,7 @@
           <nav class="nav">
             <ul class="nav_links flex">
               <li class="nav_link">
-                <a class="active" href="#about">About</a>
+                <a href="#about">About</a>
               </li>
               <li class="nav_link"><a href="#skills">Skills</a></li>
               <li class="nav_link"><a href="#gallery">Gallery</a></li>
@@ -111,8 +111,32 @@
               <li class="nav_link"><a href="#features">Features</a></li>
               <li class="nav_link"><a href="#Testimonials">Testimonials</a></li>
             </ul>
+
+            <button aria-label=" mobile btn" class="nav_mobile">
+              <i
+                aria-label="open nav"
+                class="fa-solid fa-bars mobile_open-nav"
+              ></i>
+            </button>
           </nav>
         </header>
+        <!-- mobile navigation -->
+        <nav aria-label="mobile navigation" class="mobile-nav">
+          <i class="fa-solid fa-xmark mobile-nav_close"></i>
+          <ul class="mobile-nav_links flex">
+            <li class="mobile-nav_link">
+              <a href="#about">About</a>
+            </li>
+            <li class="mobile-nav_link"><a href="#skills">Skills</a></li>
+            <li class="mobile-nav_link"><a href="#gallery">Gallery</a></li>
+            <li class="mobile-nav_link"><a href="#timeline">Timeline</a></li>
+            <li class="mobile-nav_link"><a href="#features">Features</a></li>
+            <li class="mobile-nav_link">
+              <a href="#Testimonials">Testimonials</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- mobile navigation -->
         <div class="landing_text">
           <h1 class="landing_title">We are <span>Creative</span> agency</h1>
           <p class="landing_p">
@@ -403,6 +427,7 @@
                 type="text"
                 placeholder="your name"
                 name="username"
+                autocomplete="name"
                 required
                 aria-required="true"
               />
@@ -411,6 +436,7 @@
                 type="text"
                 placeholder="your phone"
                 name="phone"
+                autocomplete="mobile"
                 required
                 aria-required="true"
               />
@@ -419,6 +445,7 @@
                 type="email"
                 placeholder="your email"
                 name="email"
+                autocomplete="email"
                 required
                 aria-required="true"
               />
@@ -445,6 +472,7 @@
         </div>
       </section>
     </main>
+    <footer class="footer">© 2022 Omar Fahmy - All rights reserved</footer>
 
     <!-- Start Scroll To Top Button -->
 

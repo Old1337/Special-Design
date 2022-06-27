@@ -11,6 +11,11 @@ const scrollTopBtn = document.querySelector(".scroll-top-btn");
 
 const sidebarBullets = document.querySelectorAll(".sidebar-nav_link");
 
+const openMobileBtn = document.querySelector(".nav_mobile");
+const closeMobileBtn = document.querySelector(".mobile-nav_close");
+const mobileNav = document.querySelector(".mobile-nav");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav_link");
+
 // observer options
 const options = {
   root: document.querySelector("#scrollArea"),
@@ -103,3 +108,23 @@ const moveToClickedSection = (e) => {
 sidebarBullets.forEach((bullet) =>
   bullet.addEventListener("click", moveToClickedSection)
 );
+
+openMobileBtn.addEventListener("click", () => {
+  mobileNav.classList.add("active");
+});
+
+closeMobileBtn.onclick = () => {
+  mobileNav.classList.remove("active");
+};
+
+mobileNavLinks.forEach((link) => {
+  link.onclick = () => {
+    mobileNav.classList.remove("active");
+  };
+});
+
+document.addEventListener("keyup", (e) => {
+  if (e.key === "Escape") {
+    mobileNav.classList.toggle("active");
+  }
+});

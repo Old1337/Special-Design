@@ -1,8 +1,76 @@
 @include respond-to("small") {
   /* Start Landing Section*/
 
-  .nav {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav_links {
     display: none;
+  }
+  .nav_mobile {
+    display: block;
+    position: relative;
+    width: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .mobile_open-nav {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99999;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    transition: var(--primary-transition);
+    transform: translate(-100%);
+
+    &.active {
+      transform: translate(0%);
+    }
+    &_links {
+      align-items: center;
+      flex-direction: column;
+
+      & li {
+        margin-bottom: 3rem;
+      }
+    }
+    &_link a {
+      font-size: 2rem;
+      color: white;
+      transition: var(--primary-transition);
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+    &_close {
+      color: var(--primary-color);
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+      border: 1px solid var(--primary-color);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
   }
   .landing_title {
     font-size: 1.5rem;
@@ -60,4 +128,17 @@
     gap: 1rem;
   }
   /* End Contact Us Section */
+
+  .footer {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 767px) {
+  .nav_mobile {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
 }
