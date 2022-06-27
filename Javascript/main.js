@@ -16,6 +16,8 @@ const closeMobileBtn = document.querySelector(".mobile-nav_close");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavLinks = document.querySelectorAll(".mobile-nav_link");
 
+const preloader = document.querySelector(".preloader");
+
 // observer options
 const options = {
   root: document.querySelector("#scrollArea"),
@@ -128,3 +130,9 @@ document.addEventListener("keyup", (e) => {
     mobileNav.classList.toggle("active");
   }
 });
+
+window.onload = () => {
+  setTimeout(() => {
+    preloader.classList.add("hide");
+  }, 2000);
+};

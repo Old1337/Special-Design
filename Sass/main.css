@@ -287,6 +287,70 @@ summary {
   color: var(--primary-color);
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  color: var(--text-color);
+  background-color: black;
+  -webkit-transition: var(--primary-transition);
+  transition: var(--primary-transition);
+}
+
+.preloader.hide {
+  opacity: 0;
+  z-index: -99;
+}
+
+.preloader_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+.preloader_text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: var(--primary-color);
+  width: 6rem;
+  height: 100%;
+  top: 0;
+  -webkit-animation: move 4s linear infinite;
+          animation: move 4s linear infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes move {
+  0%,
+  100% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 6rem);
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 6rem);
+  }
+}
+
 .popup-overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
